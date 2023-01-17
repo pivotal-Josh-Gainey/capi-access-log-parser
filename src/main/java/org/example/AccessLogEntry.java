@@ -8,6 +8,7 @@ public class AccessLogEntry {
     private String fullUrl;
     private BigDecimal responseTime;
 
+
     public String getHost() {
         return host;
     }
@@ -38,6 +39,14 @@ public class AccessLogEntry {
 
     public void setResponseTime(BigDecimal responseTime) {
         this.responseTime = responseTime;
+    }
+
+    @Override
+    public String toString() {
+        return host + ',' +
+                path + ',' +
+                fullUrl + ',' +
+                responseTime;
     }
 }
 
